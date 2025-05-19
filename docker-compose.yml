@@ -12,3 +12,6 @@ services:
       - 53773
     volumes:
       - ./:/home/irisowner/dev
+    environment:
+      - MODEL=$MODEL
+      - API_KEY=$API_KEY
