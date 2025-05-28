@@ -248,6 +248,7 @@ ClassMethod Agents(pInput As %String) [ Language = python ]
     # Add nodes
     workflow.add_node("classify_priority", classify_priority_node)
     workflow.add_node("identify_topic", identify_topic_node)
+
     workflow.add_node("make_decision", decision_node)
     workflow.add_node("rag", rag_node)
     workflow.add_node("generate_reply", generate_reply_node)
@@ -308,12 +309,12 @@ ClassMethod Agents(pInput As %String) [ Language = python ]
 
 ClassMethod Escalate()
 {
-    W ..Agents("Our medical data security system is facing vulnerabilities, possibly due to outdated software without proper encryption. Despite attempts to secure the system by updating applications and implementing firewall rules, the issues continue. Urgent assistance is needed to resolve this issue as soon as possible.")
+    Write ..Agents("Our medical data security system is facing vulnerabilities, possibly due to outdated software without proper encryption. Despite attempts to secure the system by updating applications and implementing firewall rules, the issues continue. Urgent assistance is needed to resolve this issue as soon as possible.")
 }
 
 ClassMethod AutoRespond()
 {
-    W ..Agents("Hello, I'm requesting Adobe Photoshop to be installed on my workstation. Please let me know the process.")
+    Write ..Agents("Hello, I'm requesting Adobe Photoshop to be installed on my workstation. Please let me know the process.")
 }
 
 }
